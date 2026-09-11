@@ -61,6 +61,7 @@ public:
 
 private:
 	Node* _Head = NULL;
+	int _Size = 0;
 
 	void _InsertAfter(Node* PrevNode, T NewValue)
 	{
@@ -76,6 +77,12 @@ private:
 	}
 
 public:
+	int GetSize()
+	{
+		return this->_Size;
+	}
+	__declspec(property(get = GetSize)) int Size;
+	
 	// Insert
 	void InsertAtBeginning(T Value)
 	{
@@ -84,6 +91,7 @@ public:
 		if (_Head == NULL)
 		{
 			_Head = NewNode;
+			this->_Size++;
 			return;
 		}
 
@@ -91,6 +99,7 @@ public:
 		_Head->Prev = NewNode;
 
 		_Head = NewNode;
+		this->_Size++;
 	}
 
 	void InsertAfter(T ExistingValue, T NewValue)
@@ -101,6 +110,7 @@ public:
 			if (Current->Value == ExistingValue)
 			{
 				this->_InsertAfter(Current, NewValue);
+				this->_Size++;
 
 				return;
 			}
@@ -114,6 +124,8 @@ public:
 		if (_Head == NULL)
 		{
 			_Head = new Node(Value, NULL, NULL);
+			this->_Size++;
+
 			return;
 		}
 
@@ -122,6 +134,7 @@ public:
 			Current = Current->Next;
 
 		this->_InsertAfter(Current, Value);
+		this->_Size++;
 	}
 
 	// Find
@@ -156,6 +169,8 @@ public:
 			_Head = Current->Next;
 
 			delete Current;
+			this->_Size--;
+
 			return;
 		}
 
@@ -172,6 +187,7 @@ public:
 			Current->Prev->Next = Current->Next;
 
 		delete Current;
+		this->_Size--;
 	}
 
 	void DeleteFirstNode()
@@ -186,6 +202,7 @@ public:
 			_Head->Prev = NULL;
 
 		delete Temp;
+		this->_Size--;
 	}
 
 	void DeleteLastnode()
@@ -198,6 +215,8 @@ public:
 			delete _Head;
 
 			_Head = NULL;
+			this->_Size--;
+
 			return;
 		}
 
@@ -208,6 +227,7 @@ public:
 		Current->Prev->Next = NULL;
 
 		delete Current;
+		this->_Size--;
 	}
 
 	// Print

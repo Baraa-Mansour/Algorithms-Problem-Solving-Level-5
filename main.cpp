@@ -41,4 +41,6 @@ int main()
         cout << "Found: " << DoubleNode->Value << endl;
     else
         cout << "Not Found!" << endl;
+
+    cout << "Size: " << doubleLinkedList.Size;
 }
