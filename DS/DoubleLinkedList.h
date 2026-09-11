@@ -82,6 +82,11 @@ public:
 		return this->_Size;
 	}
 	__declspec(property(get = GetSize)) int Size;
+
+	bool IsEmpty()
+	{
+		return this->Size == 0;
+	}
 	
 	// Insert
 	void InsertAtBeginning(T Value)

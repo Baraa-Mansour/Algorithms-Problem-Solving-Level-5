@@ -42,5 +42,10 @@ int main()
     else
         cout << "Not Found!" << endl;
 
-    cout << "Size: " << doubleLinkedList.Size;
+    cout << "Size: " << doubleLinkedList.Size << endl;
+
+    if (doubleLinkedList.IsEmpty())
+        cout << "Empty!" << endl;
+    else
+        cout << "Not Empty!" << endl;
 }
