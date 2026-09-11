@@ -88,6 +88,7 @@ public:
 		return this->Size == 0;
 	}
 	
+
 	// Insert
 	void InsertAtBeginning(T Value)
 	{
@@ -142,6 +143,7 @@ public:
 		this->_Size++;
 	}
 
+
 	// Find
 	Node* Find(T Value)
 	{
@@ -159,6 +161,7 @@ public:
 
 		return NULL;
 	}
+
 
 	// Delete
 	void Delete(T Value)
@@ -235,7 +238,14 @@ public:
 		this->_Size--;
 	}
 
-	// Print
+	void Clear()
+	{
+		while (this->Size > 0)
+			this->DeleteFirstNode();
+	}
+
+
+	// Util
 	void Print()
 	{
 		Node* Current = _Head;

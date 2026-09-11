@@ -48,4 +48,11 @@ int main()
         cout << "Empty!" << endl;
     else
         cout << "Not Empty!" << endl;
+
+    doubleLinkedList.Clear();
+    if (doubleLinkedList.IsEmpty())
+        cout << "Empty After Clear!" << endl;
+    else
+        cout << "Not Empty, Problem With Clear!" << endl;
+
 }
