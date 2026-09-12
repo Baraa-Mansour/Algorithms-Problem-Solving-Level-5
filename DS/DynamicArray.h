@@ -1,0 +1,57 @@
+#pragma once
+#include <iostream>
+using namespace std;
+
+template<typename T>
+class DynamicArray
+{
+private:
+	T* _Array;
+	int _Size;
+
+	bool _IsValidIndex(int Index)
+	{
+		return (Index >= 0) && (Index < this->Size);
+	}
+
+public:
+	DynamicArray(int Size)
+	{
+		this->_Size = Size >= 0 ? Size : 0;
+
+		_Array = new T[this->Size];
+	}
+
+	~DynamicArray()
+	{
+		delete[] _Array;
+	}
+
+	bool IsEmpty()
+	{
+		return this->Size == 0;
+	}
+
+	int GetSize()
+	{
+		return this->_Size;
+	}
+	__declspec(property(get = GetSize))int Size;
+
+	bool SetItem(int Index, T Value)
+	{
+		if (this->_IsValidIndex(Index))
+		{
+			this->_Array[Index] = Value;
+			return true;
+		}
+		return false;
+	}
+
+	void Print()
+	{
+		for (int i = 0; i < this->Size ; i++)
+			cout << _Array[i] << " ";
+		cout << endl;
+	}
+};

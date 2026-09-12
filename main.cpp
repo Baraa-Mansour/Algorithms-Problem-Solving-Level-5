@@ -2,18 +2,34 @@
 #include "DS/DoubleLinkedList.h"
 #include "DS/Queue.h"
 #include "DS/Stack.h"
+#include "DS/DynamicArray.h"
 using namespace std;
 
 void TryDoubleLinkedList();
 void TryQueue();
 void TryStack();
+void TryDynamicArray();
 
 int main()
 {
-    TryQueue();
-    TryStack();
+    TryDynamicArray();
 }
 
+void TryDynamicArray()
+{
+    DynamicArray<int> arr(5);
+
+    arr.SetItem(0, 0);
+    arr.SetItem(1, 1);
+    arr.SetItem(2, 2);
+    arr.SetItem(3, 3);
+    arr.SetItem(4, 4);
+    arr.SetItem(5, 5);
+
+    arr.Print();
+    cout << "Size: " << arr.Size << endl;
+    cout << "Empty: " << arr.IsEmpty() << endl;
+}
 void TryStack()
 {
     Stack<int> stack;
