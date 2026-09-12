@@ -107,7 +107,7 @@ public:
 		this->_Size++;
 	}
 
-	void InsertAfter(T ExistingValue, T NewValue)
+	void InsertAfterValue(T ExistingValue, T NewValue)
 	{
 		Node* Current = _Head;
 		while (Current != NULL)
@@ -122,6 +122,14 @@ public:
 
 			Current = Current->Next;
 		}
+	}
+
+	void InsertAfterIndex(int Index, T NewValue)
+	{
+		Node* Node = this->GetNode(Index);
+
+		if (Node != NULL)
+			this->_InsertAfter(Node, NewValue);
 	}
 
 	void InsertAtEnd(T Value)

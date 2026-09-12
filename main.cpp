@@ -21,10 +21,10 @@ int main()
     doubleLinkedList.InsertAtBeginning(2);
     doubleLinkedList.InsertAtBeginning(1);
 
-    doubleLinkedList.InsertAfter(2, 25);
-    doubleLinkedList.InsertAfter(4, 5);
-    doubleLinkedList.InsertAfter(9, 10);
-    doubleLinkedList.InsertAfter(1, 15);
+    doubleLinkedList.InsertAfterValue(2, 25);
+    doubleLinkedList.InsertAfterValue(4, 5);
+    doubleLinkedList.InsertAfterValue(9, 10);
+    doubleLinkedList.InsertAfterValue(1, 15);
 
     doubleLinkedList.InsertAtEnd(9);
 
@@ -40,6 +40,10 @@ int main()
 
     if(doubleLinkedList.UpdateValue(3, 1))
         doubleLinkedList.Print();
+
+    doubleLinkedList.InsertAfterIndex(2, 2);
+    doubleLinkedList.Print();
+
 
     DoubleLinkedList<int>::Node* DoubleNode = doubleLinkedList.Find(3);
     if (DoubleNode != NULL)
