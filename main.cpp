@@ -38,6 +38,9 @@ int main()
     doubleLinkedList.Reverse();
     doubleLinkedList.Print();
 
+    if(doubleLinkedList.UpdateValue(3, 1))
+        doubleLinkedList.Print();
+
     DoubleLinkedList<int>::Node* DoubleNode = doubleLinkedList.Find(3);
     if (DoubleNode != NULL)
         cout << "Found By Value: " << DoubleNode->Value << endl;

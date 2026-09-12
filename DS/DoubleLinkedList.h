@@ -1,7 +1,5 @@
 #pragma once
 #include<iostream>
-#include <optional>
-
 using namespace std;
 
 template<typename T>
@@ -267,6 +265,21 @@ public:
 	{
 		while (this->Size > 0)
 			this->DeleteFirstNode();
+	}
+
+
+	// Update
+	bool UpdateValue(int Index, T NewValue)
+	{
+		Node* Node = this->GetNode(Index);
+
+		if (Node != NULL)
+		{
+			Node->Value = NewValue;
+			return true;
+		}
+
+		return false;
 	}
 
 
