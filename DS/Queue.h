@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "DoubleLinkedList.h"
 
 using namespace std;
 
@@ -27,9 +28,9 @@ public:
 
 	T Pop()
 	{
-		T Value = this->Back();
+		T Value = this->Front();
 
-		this->_List.DeleteLastnode();
+		this->_List.DeleteFirstNode();
 
 		return Value;
 	}
