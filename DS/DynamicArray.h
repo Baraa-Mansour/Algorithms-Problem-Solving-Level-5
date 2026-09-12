@@ -94,6 +94,25 @@ public:
 		_Array = new T[0];
 	}
 
+	bool DeleteItemAt(int Index)
+	{
+		if (!this->_IsValidIndex(Index))
+			return false;
+		int NewSize = this->Size - 1;
+
+		T* Temp = new T[NewSize];
+
+		for (int i = 0; i < Index; i++)
+			Temp[i] = _Array[i];
+		for (int i = Index; i < this->Size - 1; i++)
+			Temp[i] = _Array[i + 1];
+
+		delete[] _Array;
+		_Array = Temp;
+		this->_Size = NewSize;
+		return true;
+	}
+
 	void Print()
 	{
 		for (int i = 0; i < this->Size ; i++)
