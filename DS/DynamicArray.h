@@ -66,6 +66,34 @@ public:
 		return false;
 	}
 
+	T GetItem(int Index)
+	{
+		if (!_IsValidIndex(Index))
+			return NULL;
+
+		return _Array[Index];
+	}
+
+	void Reverse()
+	{
+		for (int i = 0; i < this->Size / 2; i++)
+		{
+			T &First = _Array[i], &Last = _Array[this->Size - 1 - i];
+
+			T Temp = First;
+			First = Last;
+			Last = Temp;
+		}
+	}
+
+	void Clear()
+	{
+		delete[] _Array;
+
+		this->_Size = 0;
+		_Array = new T[0];
+	}
+
 	void Print()
 	{
 		for (int i = 0; i < this->Size ; i++)
