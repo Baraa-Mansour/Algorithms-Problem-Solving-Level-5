@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include <optional>
 
 using namespace std;
 
@@ -172,6 +173,18 @@ public:
 			Current = Current->Next;
 		
 		return Current;
+	}
+
+	T GetValue(int Index) // Get Value By Index (0 based)
+	{
+		// Work Only If 0 is Not Valid Value
+
+		Node* Node = this->GetNode(Index);
+
+		if (Node == NULL)
+			return NULL;
+
+		return Node->Value;
 	}
 
 

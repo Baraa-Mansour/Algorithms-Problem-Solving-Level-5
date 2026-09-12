@@ -50,6 +50,12 @@ int main()
     else
         cout << "Not Found!" << endl;
 
+    int Value = doubleLinkedList.GetValue(0);
+    if (Value != NULL)
+        cout << "Found By Index: " << Value << endl;
+    else
+        cout << "Not Found!" << endl;
+
     cout << "Size: " << doubleLinkedList.Size << endl;
 
     if (doubleLinkedList.IsEmpty())
