@@ -1,8 +1,32 @@
 #include <iostream>
 #include "DS/DoubleLinkedList.h"
+#include "DS/Queue.h"
 using namespace std;
 
+void TryDoubleLinkedList();
+
+
 int main()
+{
+    Queue<int> queue;
+
+    queue.Push(10);
+    queue.Push(20);
+    queue.Push(30);
+    queue.Push(40);
+    queue.Push(50);
+
+    queue.Print();
+    cout << "Size: " << queue.Size() << endl;
+    cout << "Front: " << queue.Front() << endl;
+    cout << "Back: " << queue.Back() << endl;
+
+    cout << "Pop: " << queue.Pop() << endl;
+    queue.Print();
+
+}
+
+void TryDoubleLinkedList()
 {
     DoubleLinkedList<int> doubleLinkedList;
 
@@ -38,7 +62,7 @@ int main()
     doubleLinkedList.Reverse();
     doubleLinkedList.Print();
 
-    if(doubleLinkedList.UpdateValue(3, 1))
+    if (doubleLinkedList.UpdateValue(3, 1))
         doubleLinkedList.Print();
 
     doubleLinkedList.InsertAfterIndex(2, 2);
@@ -75,5 +99,4 @@ int main()
         cout << "Empty After Clear!" << endl;
     else
         cout << "Not Empty, Problem With Clear!" << endl;
-
 }

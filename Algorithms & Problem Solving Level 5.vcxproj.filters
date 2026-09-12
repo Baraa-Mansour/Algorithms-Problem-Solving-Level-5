@@ -26,6 +26,9 @@
     <ClInclude Include="DS\DoubleLinkedList.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="DS\Queue.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
