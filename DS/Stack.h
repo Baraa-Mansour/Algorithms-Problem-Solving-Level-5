@@ -1,52 +1,25 @@
 #pragma once
 #include <iostream>
-#include "DoubleLinkedList.h"
+#include "Queue.h"
 
 using namespace std;
 
 template<typename T>
-class Stack
+class Stack : public Queue<T>
 {
-private:
-	DoubleLinkedList<T> _List;
-
 public:
-	bool IsEmpty()
-	{
-		return this->_List.IsEmpty();
-	}
-
-	int Size()
-	{
-		return this->_List.Size;
-	}
-
 	void Push(T Value)
 	{
-		this->_List.InsertAtBeginning(Value);
-	}
-
-	T Pop()
-	{
-		T Value = this->Top();
-
-		this->_List.DeleteFirstNode();
-
-		return Value;
-	}
-
-	void Print()
-	{
-		_List.Print();
+		Queue<T>::_List.InsertAtBeginning(Value);
 	}
 
 	T Top()
 	{
-		return this->_List.GetValue(0);
+		return this->Front();
 	}
 
 	T Bootom()
 	{
-		return _List.GetValue(_List.Size - 1);
+		return this->Back();
 	}
 };

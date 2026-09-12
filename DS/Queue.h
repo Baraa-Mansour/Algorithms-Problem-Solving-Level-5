@@ -7,7 +7,7 @@ using namespace std;
 template<typename T>
 class Queue
 {
-private:
+protected:
 	DoubleLinkedList<T> _List;
 
 public:
