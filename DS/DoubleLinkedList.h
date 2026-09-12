@@ -145,7 +145,7 @@ public:
 
 
 	// Find
-	Node* Find(T Value)
+	Node* Find(T Value) // Find The Node By Value
 	{
 		if (_Head == NULL || _Head->Value == Value)
 			return _Head;
@@ -258,5 +258,23 @@ public:
 		}
 
 		cout << endl;
+	}
+
+	void Reverse()
+	{
+		Node* Current = _Head;
+		Node* Temp = NULL;
+
+		while (Current != NULL)
+		{
+			Temp = Current->Prev;
+			Current->Prev = Current->Next;
+			Current->Next = Temp;
+
+			Current = Current->Prev;
+		}
+
+		if (Temp != NULL)
+			_Head = Temp->Prev;
 	}
 };

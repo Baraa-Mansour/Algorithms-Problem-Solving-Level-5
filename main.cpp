@@ -35,6 +35,8 @@ int main()
     doubleLinkedList.DeleteLastnode();
 
     doubleLinkedList.Print();
+    doubleLinkedList.Reverse();
+    doubleLinkedList.Print();
 
     DoubleLinkedList<int>::Node* DoubleNode = doubleLinkedList.Find(3);
     if (DoubleNode != NULL)
