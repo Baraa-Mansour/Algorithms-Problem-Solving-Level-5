@@ -29,6 +29,11 @@ void TryDynamicArray()
     arr.Print();
     cout << "Size: " << arr.Size << endl;
     cout << "Empty: " << arr.IsEmpty() << endl;
+
+    arr.ReSize(10);
+    arr.Print();
+    arr.ReSize(2);
+    arr.Print();
 }
 void TryStack()
 {

@@ -38,6 +38,24 @@ public:
 	}
 	__declspec(property(get = GetSize))int Size;
 
+	void ReSize(int NewSize)
+	{
+		if (NewSize < 0)
+			return;
+
+		T* Temp = new T[NewSize];
+		int MinSize = NewSize > this->Size ? this->Size : NewSize;
+
+		for (int i = 0; i < MinSize; i++)
+		{
+			Temp[i] = _Array[i];
+		}
+
+		this->_Size = NewSize;
+		delete[] _Array;
+		_Array = Temp;
+	}
+
 	bool SetItem(int Index, T Value)
 	{
 		if (this->_IsValidIndex(Index))
