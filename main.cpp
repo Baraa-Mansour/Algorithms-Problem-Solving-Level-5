@@ -1,12 +1,38 @@
 #include <iostream>
 #include "DS/DoubleLinkedList.h"
 #include "DS/Queue.h"
+#include "DS/Stack.h"
 using namespace std;
 
 void TryDoubleLinkedList();
-
+void TryQueue();
+void TryStack();
 
 int main()
+{
+    TryQueue();
+    TryStack();
+}
+
+void TryStack()
+{
+    Stack<int> stack;
+
+    stack.Push(10);
+    stack.Push(20);
+    stack.Push(30);
+    stack.Push(40);
+    stack.Push(50);
+
+    stack.Print();
+    cout << "Size: " << stack.Size() << endl;
+    cout << "Top: " << stack.Top() << endl;
+    cout << "Bootom: " << stack.Bootom() << endl;
+
+    cout << "Pop: " << stack.Pop() << endl;
+    stack.Print();
+}
+void TryQueue()
 {
     Queue<int> queue;
 
@@ -23,9 +49,7 @@ int main()
 
     cout << "Pop: " << queue.Pop() << endl;
     queue.Print();
-
 }
-
 void TryDoubleLinkedList()
 {
     DoubleLinkedList<int> doubleLinkedList;

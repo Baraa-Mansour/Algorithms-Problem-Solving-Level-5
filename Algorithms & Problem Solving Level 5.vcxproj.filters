@@ -29,6 +29,9 @@
     <ClInclude Include="DS\Queue.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="DS\Stack.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

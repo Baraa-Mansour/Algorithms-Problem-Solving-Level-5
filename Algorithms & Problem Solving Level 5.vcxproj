@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClInclude Include="DS\DoubleLinkedList.h" />
     <ClInclude Include="DS\Queue.h" />
+    <ClInclude Include="DS\Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
