@@ -26,7 +26,9 @@ void TryDynamicArray()
     arr.SetItem(4, 4);
     arr.SetItem(5, 5);
 
+    arr.DeleteFirstItem();
     arr.DeleteItemAt(2);
+    arr.DeleteLastItem();
 
     arr.Print();
     cout << "Size: " << arr.Size << endl;
@@ -35,8 +37,8 @@ void TryDynamicArray()
     arr.Reverse();
     arr.Print();
 
-    arr.ReSize(5);
-    arr.SetItem(4, 5);
+    arr.ReSize(3);
+    arr.SetItem(2, 5);
     arr.Print();
     
     arr.ReSize(2);

@@ -113,6 +113,16 @@ public:
 		return true;
 	}
 
+	bool DeleteFirstItem()
+	{
+		return this->DeleteItemAt(0);
+	}
+
+	bool DeleteLastItem()
+	{
+		return this->DeleteItemAt(this->Size - 1);
+	}
+
 	void Print()
 	{
 		for (int i = 0; i < this->Size ; i++)
