@@ -145,7 +145,7 @@ public:
 
 
 	// Find
-	Node* Find(T Value) // Find The Node By Value
+	Node* Find(T Value) // Get Node By Value
 	{
 		if (_Head == NULL || _Head->Value == Value)
 			return _Head;
@@ -160,6 +160,18 @@ public:
 		}
 
 		return NULL;
+	}
+
+	Node* GetNode(int Index) // Get Node By Index (0 based)
+	{
+		if (Index < 0 || Index >= this->Size)
+			return NULL;
+
+		Node* Current = _Head;
+		for (int i = 0; i < Index; i++)
+			Current = Current->Next;
+		
+		return Current;
 	}
 
 

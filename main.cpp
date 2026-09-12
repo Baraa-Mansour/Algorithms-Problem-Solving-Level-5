@@ -40,7 +40,13 @@ int main()
 
     DoubleLinkedList<int>::Node* DoubleNode = doubleLinkedList.Find(3);
     if (DoubleNode != NULL)
-        cout << "Found: " << DoubleNode->Value << endl;
+        cout << "Found By Value: " << DoubleNode->Value << endl;
+    else
+        cout << "Not Found!" << endl;
+
+    DoubleLinkedList<int>::Node* DoubleNode2 = doubleLinkedList.GetNode(2);
+    if (DoubleNode2 != NULL)
+        cout << "Found By Index: " << DoubleNode2->Value << endl;
     else
         cout << "Not Found!" << endl;
 
