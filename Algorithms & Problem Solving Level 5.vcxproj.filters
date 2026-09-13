@@ -16,6 +16,9 @@
     <Filter Include="Header Files\DS">
       <UniqueIdentifier>{ac6ebf5e-26ad-421a-946f-f0a70cb828da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Lib">
+      <UniqueIdentifier>{3bdc0a8f-335e-4aaf-bbbf-f3aeb672685d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,6 +46,15 @@
     </ClInclude>
     <ClInclude Include="String.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\clsString.h">
+      <Filter>Header Files\Lib</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\clsDate.h">
+      <Filter>Header Files\Lib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

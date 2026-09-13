@@ -6,6 +6,7 @@
 #include "DS/ArrQueue.h"
 #include "DS/ArrStack.h"
 #include "String.h"
+#include "QueueLine.h"
 using namespace std;
 
 void TryDoubleLinkedList();
@@ -15,12 +16,56 @@ void TryStack();
 void TryDynamicArray();
 void TryArrStack();
 void StackUseCase();
+void QueueUseCase();
 
 int main()
 {
-    StackUseCase();
+    QueueUseCase();
 }
 
+void QueueUseCase()
+{
+    QueueLine PayBillsQueue("A0", 10);
+    QueueLine SubscriptionsQueue("B0", 5);
+
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+    PayBillsQueue.IssueTicket();
+
+    cout << "\nPay Bills Queue Info:\n";
+    PayBillsQueue.PrintInfo();
+
+    PayBillsQueue.PrintTicketsLineRTL();
+    PayBillsQueue.PrintTicketsLineLTR();
+
+
+
+    PayBillsQueue.PrintAllTickets();
+
+    PayBillsQueue.ServeNextClient();
+    cout << "\nPay Bills Queue After Serving One client\n";
+    PayBillsQueue.PrintInfo();
+
+    cout << "\nSubscriptions Queue Info:\n";
+
+    SubscriptionsQueue.IssueTicket();
+    SubscriptionsQueue.IssueTicket();
+    SubscriptionsQueue.IssueTicket();
+
+
+    SubscriptionsQueue.PrintInfo();
+
+    SubscriptionsQueue.PrintTicketsLineRTL();
+    SubscriptionsQueue.PrintTicketsLineLTR();
+
+    SubscriptionsQueue.PrintAllTickets();
+
+    SubscriptionsQueue.ServeNextClient();
+    cout << "\nSubscriptions Queue After Serving One client\n";
+    SubscriptionsQueue.PrintInfo();
+}
 void StackUseCase()
 {
     cout << "Undo/Redo Example: \n";

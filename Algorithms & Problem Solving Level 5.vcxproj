@@ -136,6 +136,9 @@
     <ClInclude Include="DS\DynamicArray.h" />
     <ClInclude Include="DS\Queue.h" />
     <ClInclude Include="DS\Stack.h" />
+    <ClInclude Include="Libraries\clsDate.h" />
+    <ClInclude Include="Libraries\clsString.h" />
+    <ClInclude Include="QueueLine.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
