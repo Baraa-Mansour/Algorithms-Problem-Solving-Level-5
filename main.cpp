@@ -19,12 +19,17 @@ void TryDynamicArray()
 {
     DynamicArray<int> arr(5);
 
-    arr.SetItem(0, 0);
-    arr.SetItem(1, 1);
-    arr.SetItem(2, 2);
-    arr.SetItem(3, 3);
-    arr.SetItem(4, 4);
-    arr.SetItem(5, 5);
+    arr.SetItem(0, 1);
+    arr.SetItem(1, 3);
+    arr.SetItem(2, 5);
+    arr.SetItem(3, 7);
+    arr.SetItem(4, 9);
+    arr.SetItem(5, 9);
+
+    arr.InsertAtBeginning(0);
+    arr.InsertAtEnd(10);
+    arr.InsertAfter(1, 2);
+    arr.InsertBefore(5, 4);
 
     arr.InsertAt(0, -1);
     arr.InsertAt(6, 5);
