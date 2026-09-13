@@ -144,6 +144,28 @@ public:
 		return DeleteItemAt(Index);
 	}
 
+	bool InsertAt(int Index, T Value)
+	{
+		if (Index < 0 || Index > this->Size)
+			return false;
+
+		int NewSize = this->Size + 1;
+		T* Temp = new T[NewSize];
+
+		for (int i = 0; i < Index; i++)
+			Temp[i] = _Array[i];
+
+		Temp[Index] = Value;
+
+		for (int i = Index; i < this->Size ; i++)
+			Temp[i + 1] = _Array[i];
+
+		delete[] _Array;
+		_Array = Temp;
+		this->_Size = NewSize;
+		return true;
+	}
+
 	void Print()
 	{
 		for (int i = 0; i < this->Size ; i++)

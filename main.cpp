@@ -26,6 +26,10 @@ void TryDynamicArray()
     arr.SetItem(4, 4);
     arr.SetItem(5, 5);
 
+    arr.InsertAt(0, -1);
+    arr.InsertAt(6, 5);
+    arr.InsertAt(7, 6);
+
     arr.DeleteItem(2);
     arr.Print();
     cout << "Size: " << arr.Size << endl;
