@@ -4,6 +4,7 @@
 #include "DS/Stack.h"
 #include "DS/DynamicArray.h"
 #include "DS/ArrQueue.h"
+#include "DS/ArrStack.h"
 using namespace std;
 
 void TryDoubleLinkedList();
@@ -11,12 +12,31 @@ void TryQueue();
 void TryArrQueue();
 void TryStack();
 void TryDynamicArray();
+void TryArrStack();
 
 int main()
 {
-    TryArrQueue();
+    TryArrStack();
 }
 
+void TryArrStack()
+{
+    ArrStack<int> stack;
+
+    stack.Push(10);
+    stack.Push(20);
+    stack.Push(30);
+    stack.Push(40);
+    stack.Push(50);
+
+    stack.Print();
+    cout << "Size: " << stack.Size() << endl;
+    cout << "Top: " << stack.Top() << endl;
+    cout << "Bootom: " << stack.Bootom() << endl;
+
+    cout << "Pop: " << stack.Pop() << endl;
+    stack.Print();
+}
 void TryArrQueue()
 {
     ArrQueue<int> queue;
