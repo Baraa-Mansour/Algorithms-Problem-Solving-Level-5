@@ -136,6 +136,7 @@
     <ClInclude Include="DS\DynamicArray.h" />
     <ClInclude Include="DS\Queue.h" />
     <ClInclude Include="DS\Stack.h" />
+    <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

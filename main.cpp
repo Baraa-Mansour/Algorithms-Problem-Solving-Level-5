@@ -5,6 +5,7 @@
 #include "DS/DynamicArray.h"
 #include "DS/ArrQueue.h"
 #include "DS/ArrStack.h"
+#include "String.h"
 using namespace std;
 
 void TryDoubleLinkedList();
@@ -13,12 +14,68 @@ void TryArrQueue();
 void TryStack();
 void TryDynamicArray();
 void TryArrStack();
+void StackUseCase();
 
 int main()
 {
-    TryArrStack();
+    StackUseCase();
 }
 
+void StackUseCase()
+{
+    cout << "Undo/Redo Example: \n";
+    cout << "==================" << endl;
+
+    String S1;
+
+    cout << "\nS1  = " << S1.Value << "\n";
+
+    S1.Value = "Mohammed";
+
+    cout << "S1  = " << S1.Value << "\n";
+
+    S1.Value = "Mohammed2";
+
+    cout << "S1  = " << S1.Value << "\n";
+
+    S1.Value = "Mohammed3";
+
+    cout << "S1  = " << S1.Value << "\n";
+
+    cout << "\n\nUndo: ";
+    cout << "\n__________\n";
+
+    S1.Undo();
+    cout << "\nS1  after undo = " << S1.Value << "\n";
+
+    S1.Undo();
+    cout << "S1  after undo = " << S1.Value << "\n";
+
+    S1.Undo();
+    cout << "S1  after undo = " << S1.Value << "\n";
+
+    cout << "\n\nRedo: ";
+    cout << "\n__________\n";
+
+    S1.Redo();
+    cout << "\nS1  after Redo = " << S1.Value << "\n";
+
+    S1.Redo();
+    cout << "S1  after Redo = " << S1.Value << "\n";
+
+    S1.Redo();
+    cout << "S1  after Redo = " << S1.Value << "\n";
+
+
+    cout << "\n\nEmpty: ";
+    cout << "\n__________\n";
+
+    S1.Redo();
+    cout << "S1  after Redo = " << S1.Value << "\n";
+
+    S1.Undo();
+    cout << "S1  after undo = " << S1.Value << "\n";
+}
 void TryArrStack()
 {
     ArrStack<int> stack;

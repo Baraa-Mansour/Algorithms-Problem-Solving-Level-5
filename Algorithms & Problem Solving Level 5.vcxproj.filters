@@ -41,6 +41,9 @@
     <ClInclude Include="DS\ArrStack.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
