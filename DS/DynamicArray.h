@@ -15,7 +15,7 @@ private:
 	}
 
 public:
-	DynamicArray(int Size)
+	DynamicArray(int Size = 0)
 	{
 		this->_Size = Size >= 0 ? Size : 0;
 
