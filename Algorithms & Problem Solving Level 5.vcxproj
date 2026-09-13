@@ -130,6 +130,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DS\ArrQueue.h" />
     <ClInclude Include="DS\DoubleLinkedList.h" />
     <ClInclude Include="DS\DynamicArray.h" />
     <ClInclude Include="DS\Queue.h" />

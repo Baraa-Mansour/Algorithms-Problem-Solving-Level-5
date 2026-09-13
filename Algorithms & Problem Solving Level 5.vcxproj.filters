@@ -35,6 +35,9 @@
     <ClInclude Include="DS\DynamicArray.h">
       <Filter>Header Files\DS</Filter>
     </ClInclude>
+    <ClInclude Include="DS\ArrQueue.h">
+      <Filter>Header Files\DS</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
