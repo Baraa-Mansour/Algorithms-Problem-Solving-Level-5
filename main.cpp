@@ -26,6 +26,12 @@ void TryDynamicArray()
     arr.SetItem(4, 4);
     arr.SetItem(5, 5);
 
+    arr.DeleteItem(2);
+    arr.Print();
+    cout << "Size: " << arr.Size << endl;
+    cout << "Empty: " << arr.IsEmpty() << endl;
+    cout << "Find At Index: " << arr.Find(2) << endl;
+
     arr.DeleteFirstItem();
     arr.DeleteItemAt(2);
     arr.DeleteLastItem();
